@@ -17,17 +17,16 @@ public class EmployeeController {
 
     //Adding  all the Employees
     @PostMapping("/employee")
-    public ResponseEntity<Employee> saveEmployee(@RequestBody  Employee employee){
+    public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee) {
         Employee savedEmployee = employeeService.saveEmployee(employee);
         return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
 
     // getting all the employees
     @GetMapping("/employee")
-    public List<Employee> getAllEmployees(){
-return employeeService.getAllEmployees();
+    public List<Employee> getAllEmployees() {
+        return employeeService.getAllEmployees();
     }
-
 
 
 }
