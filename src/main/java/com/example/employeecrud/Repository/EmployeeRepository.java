@@ -11,7 +11,7 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {// when we have extended the jpa repository that means we have already imported the usual methods
 
 // here we are putting the methods that are not already defined
-    @Query("select e from Employee  e ")
+
     List<Employee> findByLastName(String lastName);
     List<Employee> findByFirstName(String firstName);
     List<Employee> findByAge(int Age);
